@@ -107,6 +107,13 @@
                 min-height: 400px;
             }
         }
+
+        @media only screen and (max-width: 768px) {
+            .images {
+                margin-top: 10px;
+                margin-bottom: 10px
+            }
+        }
     </style>
 </head>
 
@@ -220,7 +227,7 @@
         }
 
         echo '
-            <div class="col-md-4 d-flex justify-content-center">
+            <div class="images col-md-4 d-flex justify-content-center">
                 <img src="' . htmlspecialchars($row['image']) . '" alt="Island Content" class="img-fluid" style="max-width: 300px; height: auto;">
             </div>
         ';
@@ -280,7 +287,7 @@
             }
 
             echo '
-                <div class="col-md-4 d-flex justify-content-center">
+                <div class="images col-md-4 d-flex justify-content-center">
                     <img src="' . htmlspecialchars($row['image']) . '" alt="Island Content" class="img-fluid" style="max-width: 300px; height: auto;">
                 </div>
             ';
@@ -340,7 +347,7 @@
             }
 
             echo '
-                <div class="col-md-4 d-flex justify-content-center">
+                <div class="images col-md-4 d-flex justify-content-center">
                     <img src="' . htmlspecialchars($row['image']) . '" alt="Island Content" class="img-fluid" style="max-width: 300px; height: auto;">
                 </div>
             ';
@@ -400,7 +407,7 @@
             }
 
             echo '
-                <div class="col-md-4 d-flex justify-content-center">
+                <div class="images col-md-4 d-flex justify-content-center">
                     <img src="' . htmlspecialchars($row['image']) . '" alt="Island Content" class="img-fluid" style="max-width: 300px; height: auto;">
                 </div>
             ';
