@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branding</title>
+    <link rel="icon" href="https://github.com/cherubien/SAM_Thumbnail/blob/main/GEO_Icon.png?raw=true" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: flex-start;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .navbar {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.7);
+            color: rgb(0, 0, 0);
+            z-index: 1000;
+            padding: 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .navbar-brand {
+            font-family: 'Georgia Regular', sans-serif;
+            font-size: 1.5rem;
+            color: #000000;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .navbar-brand img {
+            margin-right: 0.5rem;
+        }
+
+        .nav-item {
+            font-family: 'Georgia Regular', sans-serif;
+            font-size: 1rem;
+        }
+
+        .container {
+            margin-top: 10px;
+            padding: 20px;
+        }
+
+        .text-content {
+            position: relative;
+            margin-top: 5%;
+            margin-left: 5%;
+        }
+
+        .name-text {
+            text-align: left;
+            font-family: 'Impact', sans-serif;
+            font-size: 3.5rem;
+            font-weight: bold;
+            position: relative;
+            z-index: 2;
+            color: #FFB114;
+        }
+
+        .name-shadow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-family: 'Impact', sans-serif;
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: rgba(255, 177, 20, 0.3);
+            z-index: 1;
+            transform: translate(5px, 5px);
+            pointer-events: none;
+        }
+
+        iframe {
+            position: relative;
+            display: block;
+            width: calc(100% - 40px);
+            height: 600px;
+            margin: 0 auto;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .content {
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .section-text {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            font-family: 'Arial Regular', sans-serif;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .text {
+            margin-top: 15px auto;
+            padding: auto;
+            text-align: justify;
+        }
+
+        .card-title {
+            font-family: 'Georgia Bold', sans-serif;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        .card-text {
+            font-family: 'Arial', sans-serif;
+            font-size: 1.25rem;
+            line-height: 1.5;
+            text-align: justify;
+        }
+
+        .artifacts-heading {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .artifacts-heading::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 80%;
+            height: 2px;
+            background: linear-gradient(45deg, #FFB114, #000000, #00A651, #F0282D, #0078D0);
+            transform: rotate(0deg);
+            z-index: 0;
+        }
+
+        @media (max-width: 576px) {
+
+            .text-content {
+                margin-top: 15%;
+                margin-left: 5%;
+                text-align: center;
+            }
+
+            .name-text {
+                font-size: 2rem;
+            }
+
+            .name-shadow {
+                margin-top: 5px;
+                font-size: 2rem;
+                transform: translate(2px, 2px);
+            }
+
+            iframe {
+                height: 250px;
+            }
+
+            .artifacts-heading::before {
+                width: 70%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #ffffff;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#home">
+                <img src="https://github.com/cherubien/SAM_Thumbnail/blob/main/GEO_Icon.png?raw=true" alt="LOGO"
+                    width="30" height="30" class="d-inline-block align-text-top">
+                XILONEN
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home"><span style=color:#000000;>Character Overview</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#artifacts"><span style=color:#000000;>Artifacts</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#weapons"><span style=color:#000000;>Weapons</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="text-content">
+        <div class="name-shadow">XILONEN - ENGRAVER OF NAMES</div>
+        <h1 class="name-text">XILONEN - ENGRAVER OF NAMES</h1>
+    </div>
+
+    <!-- Video Section -->
+    <div class="container" id="home">
+        <iframe src="https://www.youtube.com/embed/5KxK37KN7Hk?si=AuoThbQsgPqX2UbW" title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <!-- Text Section -->
+    <div class="content">
+        <div class="row align-items-center text-center m-5 pb-2">
+            <div class="col-md-12">
+                <p class="section-text">Xilonen is a 5-star Geo character in Genshin Impact, introduced in version 5.1.
+                    She serves as a Name Engraver for the Children of Echoes, bearing the Ancient Name "<span
+                        style="color: #0078D0;"><strong>Baraka</strong></span>." As a
+                    blacksmith from the new region of <span style="color: #F0282D;"><strong>Natlan</strong></span>,
+                    Xilonen is renowned for her exceptional craftsmanship,
+                    often found enjoying leisure time with naps in the sun but demonstrating unparalleled skill at the
+                    forge.
+                </p>
+                <p class="section-text">In combat, Xilonen wields a sword and functions primarily as a Geo support
+                    character. Her abilities include resistance reduction via her Elemental Skill and single-target
+                    healing from her Elemental Burst.
+                </p>
+                <p class="section-text">Beyond her smithing and combat prowess, Xilonen is depicted as a roller-skating
+                    DJ, bringing a modern flair to the game's fantasy setting. Her character trailer showcases her
+                    performing an original rap verse, highlighting her vibrant and energetic personality.
+                </p>
+                <p class="section-text">For players interested in optimizing Xilonen's performance, recommended builds
+                    focus on enhancing her support capabilities, emphasizing stats such as Defense and Energy Recharge
+                    to maximize her healing and resistance reduction effects.
+                </p>
+                <p class="section-text">Overall, <span style="color: #FFB114;"><strong>Xilonen</strong></span> adds a
+                    unique blend of traditional craftsmanship and
+                    contemporary style to Genshin Impact's diverse roster of characters.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid p-0">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <img src="https://github.com/cherubien/SAM_Thumbnail/blob/main/Yellow%20Banner.png?raw=true"
+                    alt="Banner" class="img-fluid mx-auto d-block">
+            </div>
+        </div>
+    </div>
+
+    <div class="text-content artifacts-heading">
+        <div class="name-shadow">ARTIFACTS</div>
+        <h1 class="name-text">ARTIFACTS</h1>
+    </div>
+
+    <div class="text">
+        <div class="row align-items-center m-5">
+            <div class="col-md-12">
+                <p class="section-text">There are many ways on how you can use Xilonen, but her main role is to shred
+                    elemental resistance of enemies. Here are some of the artifacts you can use to fully maximize here
+                    support capabilities.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="container" id="artifacts">
+        <div class="row my-3">
+            <div class="col m-0">
+                <div class="display-3">
+                </div>
+            </div>
+        </div>
+        <div class="row my-3" id="container"></div>
+    </div>
+
+    <div class="container-fluid p-0">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <img src="https://github.com/cherubien/SAM_Thumbnail/blob/main/Weapon%20Banner.png?raw=true"
+                    alt="Banner" class="img-fluid mx-auto d-block">
+            </div>
+        </div>
+    </div>
+
+    <div class="text-content artifacts-heading">
+        <div class="name-shadow">WEAPONS</div>
+        <h1 class="name-text">WEAPONS</h1>
+    </div>
+
+    <div class="text">
+        <div class="row align-items-center m-5">
+            <div class="col-md-12">
+                <p class="section-text">Same goes with available weapons. There are a lot of viable weapons that she
+                    could use, from a premium 5-star weapon to
+                    a more free-to-play options. Either way, she can fulfill her role as a support for her team
+                    regardless of what available weapon you have for her.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="weapons">
+        <div class="row my-3">
+            <div class="col">
+                <div class="display-3">
+                </div>
+            </div>
+        </div>
+        <div class="row my-3" id="container2"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+
+    <script>
+        var artifact = ["Scroll of the Hero of Cinder City", "Noblesse Oblige", "Instructor", "Archaic Petra"];
+        var imgArti = ["https://github.com/cherubien/SAM_Thumbnail/blob/main/Artiact_1.png?raw=true", "https://github.com/cherubien/SAM_Thumbnail/blob/main/Artifact_2.png?raw=true", "https://github.com/cherubien/SAM_Thumbnail/blob/main/Artifact_3.png?raw=true", "https://github.com/cherubien/SAM_Thumbnail/blob/main/Artifact_4.png?raw=true"];
+        var textArti = ["Xilonen’s best artifact set by far. It provides a significant 40% DMG Bonus team buff that is far beyond any alternatives, as well as reducing her ER requirements with its 2pc effect which is amplified by her A4 Passive’s “fake” Nightsoul Burst.", "Noblesse is an alternative for teams with ATK-scaling DPS units in the unlikely scenario where it is impossible to reliably Crystallize the correct Element for 4pc Scroll. However, this scenario is exceedingly rare thanks to Scroll’s long duration, since Xilonen usually only needs to proc the set effect once per rotation.", "Much the same as Noblesse, Instructor is an alternative in the very niche scenarios where Xilonen is unable to reliably react with the correct Element. Its 120 EM buff is valuable for DPS units that use Amplifying or Additive Reactions. Once again, this scenario is exceedingly rare and can usually be easily solved with careful rotation setups, since Xilonen can get away with only activating Scroll once per rotation.", "Archaic Petra offers 5% less DMG Bonus than 4pc Scroll, has a worse trigger condition, and has half the buff duration. Not a very good deal. And since both Archaic Petra and Scroll require Xilonen to react with the “correct” Element, there is no situation where Archaic Petra is worth using over Scroll. Xilonen can instead let one of her teammates equip this set, who can then take the field after her and pick up the Elemental Shard she creates to buff the corresponding Element even further."];
+
+        for (var i = 0; i < 4; i++) {
+            var container = document.getElementById("container");
+            container.innerHTML += "<div class=\"col-12 col-md-6 \"><div class=\"card my-3\" id=\"card" + i + "\"><img src=\"" + imgArti[i] + "\" class=\"card-img-top\" alt=\"\"><div class=\"card-body\"><h5 class=\"card-title\">" + artifact[i] + "</h5><p class=\"card-text\">" + textArti[i] + "</p></div></div></div>";
+        }
+    </script>
+
+    <script>
+        var weapon = ["Peak Patrol Song", "Favonius Sword", "Flute of Ezpitzal", "Cinnabar Spindle"];
+        var imgWeap = ["https://github.com/cherubien/SAM_Thumbnail/blob/main/Weapon_1.png?raw=true", "https://github.com/cherubien/SAM_Thumbnail/blob/main/Weapon_2.png?raw=true", "https://github.com/cherubien/SAM_Thumbnail/blob/main/Weapon_3.png?raw=true", "https://github.com/cherubien/SAM_Thumbnail/blob/main/Weapon_4.png?raw=true"];
+        var textWeap = ["Xilonen’s signature weapon and general Best-in-Slot. It provides a valuable and easy-to-stack DMG Bonus to further increase her supportive capabilities. Its passive cap is also very easy to max out, with a DEF% main stat and a few DEF% substats being enough for a Lv. 80/90 Xilonen.", "Xilonen’s second-best option overall. She has an easy time activating its passive as she can build CRIT Rate without sacrificing much, plus she deals multiple hits during her field time. Favonius Sword also conveniently takes care of Xilonen’s ER requirements in most teams.", "Another cheap alternative, and a good option if Xilonen’s ER requirements are low. Flute of Ezpitzal is free and has a DEF% secondary stat to increase Xilonen’s healing. You can even get away with not leveling it, since it already provides 31% DEF at Level 1.", "The Cinnabar Spindle is an excellent free-to-play weapon for Xilonen due to its synergy with her Geo-based abilities. This sword provides a high Defense stat, which directly benefits her healing and support capabilities since her skills scale with Defense."];
+
+        for (var i = 0; i < 4; i++) {
+            var container = document.getElementById("container2");
+            container.innerHTML += "<div class=\"col-12 col-md-6 \"><div class=\"card my-3\" id=\"card" + i + "\"><img src=\"" + imgWeap[i] + "\" class=\"card-img-top\" alt=\"\"><div class=\"card-body\"><h5 class=\"card-title\">" + weapon[i] + "</h5><p class=\"card-text\">" + textWeap[i] + "</p></div></div></div>";
+        }
+    </script>
+</body>
+
+</html>
